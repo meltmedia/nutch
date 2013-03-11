@@ -30,9 +30,19 @@
 	</publications>
 
 	<dependencies>
+		<!-- **** Required dependency for elastic search client and api 
+		(additional repo added in ivysettings) (can be removed if elasticsearch is not needed **** -->
+		<dependency org="org.elasticsearch" name="elasticsearch" rev="0.20.5" 
+			conf="*->default"/>
+               
 		<dependency org="org.apache.solr" name="solr-solrj" rev="3.4.0"
 			conf="*->default"/>
 		<dependency org="org.slf4j" name="slf4j-log4j12" rev="1.6.1" conf="*->master" />
+
+		<dependency org="commons-logging" name="commons-logging"
+			rev="1.0.4" conf="*->master" />
+		<dependency org="commons-logging" name="commons-logging-api"
+			rev="1.0.4" conf="*->master" />
 
 		<dependency org="commons-lang" name="commons-lang" rev="2.6"
 			conf="*->default" />
