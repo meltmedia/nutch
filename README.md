@@ -39,5 +39,5 @@ then start the crawler
 
 Once the crawl is complete, feed the data into Elasticsearch using the ElasticsearchIndexer:
 ```
-./bin/nutch org.apache.nutch.indexer.elasticsearch.ElasticsearchIndexer  search.meltdev.com 9300 crawl/crawldb crawl/linkdb crawl/segments/*
+./bin/nutch org.apache.nutch.indexer.elasticsearch.ElasticsearchIndexer ELASTICSEARCH_DOMAIN 9300 crawl/crawldb crawl/linkdb crawl/segments/*
 ```
