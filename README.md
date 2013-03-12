@@ -11,15 +11,11 @@ Nutch uses ant to build.  Clone the repository and run `ant`.
 Nutch is a little difficult to get running at first.  Here are the basic instructions for performing 
 a crawl and getting the crawl data up on elasticsearch.
 
-### Move into the local runtime directory
+### Getting started
 
-After you build Nutch, there will be a newly created directory called `runtime/local` created at the top level 
-of the project.  This directory contains an environment for running Nutch.
-
-### Configure Nutch
-
-This is the voodoo part of this process.  Since you will need different configuration for each site you want to crawl, 
-I cannot provide you step by step instructions here.
+There is all kinds of voodoo required to get Nutch configured.  I have started the process of adding a configuration
+to this repository for crawling a locally mounted afp volume.  After building, change your directory to `runtime/afp` to use this
+use this configuration.  [See the readme](https://github.com/meltmedia/nutch/tree/meltmedia-search-1.x/runtime/afp) in that directory for more instructions.
 
 ### Perform the Crawl
 
