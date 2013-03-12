@@ -3,5 +3,7 @@ conf/*.xml
 conf/hadoop-env.sh
 conf/slaves
 build/
-runtime/
+runtime/*/bin
+runtime/*/lib
+runtime/*/plugins
 logs/

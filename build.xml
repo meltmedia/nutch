@@ -323,6 +323,28 @@
     <copy todir="${runtime.local}/test">
       <fileset dir="${build.dir}/test"/>
     </copy>
+    <!-- configuration for scanning a locally mounted afp directory. -->
+    <copy file="${build.dir}/${final.name}.jar"
+          todir="${runtime.afp}/lib"/>
+    <copy todir="${runtime.afp}/lib/native">
+      <fileset dir="lib/native"/>
+    </copy>
+    <copy todir="${runtime.afp}/bin">
+      <fileset dir="src/bin"/>
+    </copy>
+    <chmod perm="ugo+x" type="file">
+        <fileset dir="${runtime.afp}/bin"/>
+    </chmod>
+    <copy todir="${runtime.afp}/lib">
+      <fileset dir="${build.dir}/lib"/>
+    </copy>
+    <copy todir="${runtime.afp}/plugins">
+      <fileset dir="${build.dir}/plugins"/>
+    </copy>
+    <copy todir="${runtime.afp}/test">
+      <fileset dir="${build.dir}/test"/>
+    </copy>
+
   </target>
 
   <!-- ================================================================== -->
